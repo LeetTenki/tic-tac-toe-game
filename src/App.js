@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect }  from 'react' //Importing UseEffect from react
+import Game from './components/game' //importing Game.js file fom Components folder
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    useEffect(() => {
+        document.title = "TIC TAC TOE"
+    }, [])
+    //Bellow is the styling of App component
+    const mystyle={
+        background:"blue",
+        fontSize: "45px",
+        textAlign:"center",
+        fontWeight: "800",
+      };
+    return(
+        <div style={mystyle}>
+            <div>TIC TAC TOE</div>
+            <div><Game/></div>
+        </div>
+    ); 
 }
-
 export default App;
