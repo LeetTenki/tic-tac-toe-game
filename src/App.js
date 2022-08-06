@@ -15,7 +15,7 @@ const App = () => {
     return(
         <div style={mystyle}>
             <div>TIC TAC TOE</div>
-            <div><Game/></div>
+            <divssd><Game/></divssd
         </div>
     ); 
 }
